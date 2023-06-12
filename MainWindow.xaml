@@ -5,8 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoginPage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1200" MinHeight="700" MinWidth="650">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="/Log In.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="507"/>
+                <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="76"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="76"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="76"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Log In" Foreground="White" MaxWidth="128" MaxHeight="58" FontSize="36" FontFamily="Georgia"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Email" Foreground="White" Width="70" Height="29" FontSize="20" FontFamily="Georgia" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <Border Grid.Column="1" Grid.Row="4" Height="70" CornerRadius="15,15,15,15" BorderThickness="3,3,3,3" BorderBrush="White">
+            <Grid>
+                <Image Width="40" Height="40" HorizontalAlignment="Left" Source="/email.png" Margin="10,0,0,0"/>
+                <TextBlock Foreground="White" Text="|" HorizontalAlignment="Left" Width="46" Height="46" FontFamily="Georgia" FontSize="30" Margin="53 7 0 0"/>
+                <TextBox Background="{x:Null}"  FontFamily="Georgia" Text="example@gmail.com" Foreground="White" FontSize="24"  Margin="63,13" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" MinLines="10" />
+            </Grid>
+        </Border>
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="Password" Foreground="White" Width="200" Height="29" FontSize="20" FontFamily="Georgia" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <Border Grid.Column="1" Grid.Row="7" Height="70" CornerRadius="15,15,15,15" BorderThickness="3,3,3,3" BorderBrush="White">
+            <Grid>
+                <Image Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Source="/password.png"/>
+                <TextBlock Foreground="White" Text="|" HorizontalAlignment="Left" Width="46" Height="46" FontFamily="Georgia" FontSize="30" Margin="53 7 0 0"/>
+                <PasswordBox BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" Margin="63,13"  FontFamily="Georgia" FontSize="24" SelectionBrush="{x:Null}" PasswordChar="*"/>
+            </Grid>
+        </Border>
+        <Button Grid.Column="1" Grid.Row="8" Width="150" Height="24" Content="Forget password?" HorizontalAlignment="Right" Background="Black" BorderBrush="{x:Null}" Foreground="#FF1A7FC1" FontStyle="Normal" FontFamily="Georgia" Cursor="Hand"/>
+        <Border Grid.Column="1" Grid.Row="9" BorderBrush="#FF343B3F" CornerRadius="15,15,15,15" Height="70" Background="#FF1A7FC1" >
+            <Button Grid.Column="1" Grid.Row="9" Content="Log In" Background="#FF1A7FC1" Width="477" Height="70" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="24"  />
+        </Border>
+        <TextBlock Grid.Column="1" Grid.Row="10" Text="____________" Foreground="White" FontFamily="Georgia" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,0,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="10" Text=" Or " Foreground="White" FontFamily="Georgia" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 5"/>
+        <TextBlock Grid.Column="1" Grid.Row="10" Text="____________" Foreground="White" FontFamily="Georgia" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,15,0"/>
+        <Image Grid.Column="1" Grid.Row="11" Source="/Social Icons.png" Width="200" Height="50" />
+        <TextBlock Grid.Column="1" Grid.Row="12" Text="Don't have an account?" Foreground="White" Width="300" Height="29" FontSize="20" FontFamily="Georgia"/>
+        <Button Grid.Column="1" Grid.Row="12" Width="103" Height="40" Content="Sign Up" HorizontalAlignment="Right" Background="Black" BorderBrush="{x:Null}" Foreground="#FF1A7FC1" FontStyle="Normal" FontFamily="Georgia" Cursor="Hand" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch" Margin="0,0,90,0" />
     </Grid>
 </Window>
